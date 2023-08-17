@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:myjourney_flutter/booking.dart';
-import 'package:myjourney_flutter/travelcard.dart';
+import 'package:myjourney_flutter/description.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
     home: booking(),
   ));

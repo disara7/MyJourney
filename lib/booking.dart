@@ -1,16 +1,17 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myjourney_flutter/travelcard.dart';
 
 class booking extends StatefulWidget {
+  const booking({super.key});
+
   @override
   _bookingState createState() => _bookingState();
 }
 
 class _bookingState extends State<booking> {
   List<String> urls = [
-    '../Assets/images/gvhotel.png',
-    '../Assets/images/gvhotel.png',
+    'Assets/images/gvhotel.png',
+    'Assets/images/gvhotel.png',
     '../Assets/images/gvhotel.png',
     '../Assets/images/gvhotel.png',
     '../Assets/images/gvhotel.png',
@@ -26,11 +27,11 @@ class _bookingState extends State<booking> {
     return Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('../Assets/images/background.png'),
+              image: AssetImage('Assets/images/background.png'),
               fit: BoxFit.fill),
         ),
         child: Scaffold(
-          backgroundColor: Color.fromARGB(255, 0, 0, 0),
+          backgroundColor: Colors.transparent,
           appBar: AppBar(
             elevation: 0.0,
             backgroundColor: Colors.transparent,
@@ -114,8 +115,8 @@ class _bookingState extends State<booking> {
                         const SizedBox(
                           height: 20.0,
                         ),
-                        Container(
-                          height: 170.0,
+                        SizedBox(
+                          height: 165.0,
                           child: TabBarView(
                             children: [
                               //Now let's create our first tab page
@@ -124,7 +125,7 @@ class _bookingState extends State<booking> {
                                   scrollDirection: Axis.horizontal,
                                   children: [
                                     travelCard(
-                                        '../Assets/images/gvhotel.png',
+                                        'Assets/images/gvhotel.png',
                                         "Grand Valley Hotel",
                                         "2km from Pink Valley",
                                         3,
@@ -151,7 +152,7 @@ class _bookingState extends State<booking> {
                               Container(
                                 child: ListView(
                                   scrollDirection: Axis.horizontal,
-                                  children: [],
+                                  children: const [],
                                 ),
                               ),
                             ],
@@ -203,8 +204,8 @@ class _bookingState extends State<booking> {
                         const SizedBox(
                           height: 20.0,
                         ),
-                        Container(
-                          height: 170.0,
+                        SizedBox(
+                          height: 165.0,
                           child: TabBarView(
                             children: [
                               //Now let's create our first tab page
@@ -237,7 +238,7 @@ class _bookingState extends State<booking> {
                               Container(
                                 child: ListView(
                                   scrollDirection: Axis.horizontal,
-                                  children: [],
+                                  children: const [],
                                 ),
                               ),
                             ],
