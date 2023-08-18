@@ -1,5 +1,8 @@
+import 'dart:js';
+
 import 'description.dart';
 import 'package:flutter/material.dart';
+import 'booking.dart';
 
 Widget travelCard(String assetImagePath, String hotelName, String location,
     int rating, String price) {
@@ -19,7 +22,7 @@ Widget travelCard(String assetImagePath, String hotelName, String location,
         padding: const EdgeInsets.all(0.2),
         //color: Colors.transparent,
         decoration: const BoxDecoration(
-          color: Colors.transparent,
+          color: Color.fromARGB(0, 0, 0, 0),
           image: DecorationImage(
             image: AssetImage('Assets/images/gvhotel.png'),
             fit: BoxFit.fill,
@@ -87,13 +90,11 @@ Widget travelCard(String assetImagePath, String hotelName, String location,
                         ),
                         ElevatedButton(
                           onPressed: () => {},
-
-                          //navigateTodescription(context, description()),
                           style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all<Color>(
                                 const Color(0xff1d9e9e)),
                             fixedSize: MaterialStateProperty.all<Size>(
-                                const Size(30, 28)),
+                                const Size(24, 28)),
                           ),
                           child: const Text(
                             'BOOK',
@@ -118,6 +119,6 @@ Widget travelCard(String assetImagePath, String hotelName, String location,
 void navigateTodescription(BuildContext context, Widget descriptionWidget) {
   Navigator.push(
     context,
-    MaterialPageRoute(builder: (context) => const description()),
+    MaterialPageRoute(builder: (context) => description()),
   );
 }

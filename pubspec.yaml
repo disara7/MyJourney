@@ -64,6 +64,10 @@ flutter:
       - Assets/images/gvhotel.png
       - Assets/images/background.png
       - Assets/images/spacestaylarge.png
+      - Assets/images/cardpay.png
+      - Assets/images/moonview.png
+      - Assets/images/spacecar.png
+      - Assets/images/star.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

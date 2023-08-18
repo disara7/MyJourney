@@ -12,8 +12,8 @@ class _bookingState extends State<booking> {
   List<String> urls = [
     'Assets/images/gvhotel.png',
     'Assets/images/gvhotel.png',
-    '../Assets/images/gvhotel.png',
-    '../Assets/images/gvhotel.png',
+    'Assets/images/moonview.png',
+    'Assets/images/moonview.png',
     '../Assets/images/gvhotel.png',
     '../Assets/images/gvhotel.png',
     '../Assets/images/gvhotel.png',
@@ -40,8 +40,16 @@ class _bookingState extends State<booking> {
                 IconButton(
                   onPressed: () {},
                   icon: const Icon(
+                    Icons.arrow_back_ios_new,
+                    color: Color(0xff1d9e9e),
+                  ),
+                ),
+                Spacer(),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
                     Icons.menu,
-                    color: Colors.black,
+                    color: Color(0xff1d9e9e),
                   ),
                 ),
               ],
@@ -56,8 +64,9 @@ class _bookingState extends State<booking> {
               children: [
                 Material(
                   elevation: 10.0,
+                  color: Color.fromARGB(255, 88, 88, 88),
                   borderRadius: BorderRadius.circular(30.0),
-                  shadowColor: const Color(0x55434343),
+                  shadowColor: Color.fromARGB(84, 161, 161, 161),
                   child: const TextField(
                     textAlign: TextAlign.start,
                     textAlignVertical: TextAlignVertical.center,
@@ -71,14 +80,25 @@ class _bookingState extends State<booking> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 30.0),
-                const Text(
-                  "CHOOSE YOUR STAY",
-                  style: TextStyle(
-                    color: Color(0xff1d9e9e),
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.w600,
-                  ),
+                const SizedBox(height: 10.0),
+                Row(
+                  children: [
+                    const Text(
+                      "CHOOSE YOUR STAY",
+                      style: TextStyle(
+                        color: Color(0xff1d9e9e),
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    // IconButton(
+                    //   onPressed: () {},
+                    //   icon: const Icon(
+                    //     Icons.toc,
+                    //     color: Color(0xff1d9e9e),
+                    //   ),
+                    // ),
+                  ],
                 ),
                 const SizedBox(height: 10.0),
                 const Text(
@@ -120,34 +140,30 @@ class _bookingState extends State<booking> {
                           child: TabBarView(
                             children: [
                               //Now let's create our first tab page
-                              Container(
-                                child: ListView(
-                                  scrollDirection: Axis.horizontal,
-                                  children: [
-                                    travelCard(
-                                        'Assets/images/gvhotel.png',
-                                        "Grand Valley Hotel",
-                                        "2km from Pink Valley",
-                                        3,
-                                        "150"),
-                                    travelCard(urls[5], "Space Stay", "Italy",
-                                        4, "150"),
-                                    travelCard(urls[2], "Safari Hotel",
-                                        "Africa", 5, "150"),
-                                  ],
-                                ),
+                              ListView(
+                                scrollDirection: Axis.horizontal,
+                                children: [
+                                  travelCard(
+                                      'Assets/images/gvhotel.png',
+                                      "Grand Valley Hotel",
+                                      "2km from Valley",
+                                      3,
+                                      "150"),
+                                  travelCard('Assets/images/moonview.png',
+                                      "Space Stay", "Italy", 4, "150"),
+                                  travelCard('Assets/images/moonview.png',
+                                      "Safari Hotel", "Africa", 5, "150"),
+                                ],
                               ),
-                              Container(
-                                child: ListView(
-                                  scrollDirection: Axis.horizontal,
-                                  children: [
-                                    //Here you can add what ever you want
-                                    travelCard(urls[6], "Visit Rome", "Italy",
-                                        4, "150"),
-                                    travelCard(urls[8], "Visit Sidi bou Said",
-                                        "Tunsia", 4, "150"),
-                                  ],
-                                ),
+                              ListView(
+                                scrollDirection: Axis.horizontal,
+                                children: [
+                                  //Here you can add what ever you want
+                                  travelCard(
+                                      urls[6], "Visit Rome", "Italy", 4, "150"),
+                                  travelCard(urls[8], "Visit Sidi bou Said",
+                                      "Tunsia", 4, "150"),
+                                ],
                               ),
                               Container(
                                 child: ListView(
