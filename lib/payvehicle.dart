@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:myjourney_flutter/hotel_success.dart';
+import 'package:myjourney_flutter/vehicle_success.dart';
+import 'hotel_success.dart';
 
-class pay extends StatefulWidget {
-  const pay({super.key});
+class payvehicle extends StatefulWidget {
+  const payvehicle({super.key});
 
   @override
-  _payState createState() => _payState();
+  _payvehicleState createState() => _payvehicleState();
 }
 
-class _payState extends State<pay> {
+class _payvehicleState extends State<payvehicle> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -50,7 +53,7 @@ class _payState extends State<pay> {
                   Row(
                     children: [
                       Text(
-                        "Space Stay",
+                        "G-Submarin3",
                         style: TextStyle(
                           color: Color.fromARGB(255, 196, 196, 196),
                           fontSize: 30.0,
@@ -60,7 +63,7 @@ class _payState extends State<pay> {
                       ),
                       Spacer(),
                       Text(
-                        "USD 492",
+                        "USD 1825",
                         style: TextStyle(
                           color: Color.fromARGB(255, 196, 196, 196),
                           fontSize: 32.0,
@@ -84,7 +87,7 @@ class _payState extends State<pay> {
                       ),
                       Spacer(),
                       Text(
-                        "3 Nights",
+                        "Mars to Venus",
                         style: TextStyle(
                           color: Color.fromARGB(255, 196, 196, 196),
                           fontSize: 14.0,
@@ -157,6 +160,7 @@ class _payState extends State<pay> {
                                   fixedSize:
                                       MaterialStatePropertyAll(Size(150, 30))),
                               onPressed: null,
+                              // () => navigateTovsuccess(context, const vsuccess()),
                               child: Text(
                                 "CONFIRM & PAY",
                                 style: TextStyle(color: Colors.black),
@@ -167,4 +171,11 @@ class _payState extends State<pay> {
           ),
         ));
   }
+}
+
+void navigateTovsuccess(BuildContext context, Widget vsuccessWidget) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const vsuccess()),
+  );
 }

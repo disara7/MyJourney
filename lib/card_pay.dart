@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:myjourney_flutter/pay.dart';
 
 class CardPay extends StatelessWidget {
+  const CardPay({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(

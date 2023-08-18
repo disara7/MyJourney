@@ -68,6 +68,10 @@ flutter:
       - Assets/images/moonview.png
       - Assets/images/spacecar.png
       - Assets/images/star.png
+      - Assets/images/submarine.png
+      - Assets/images/congratulations.gif
+      - Assets/images/tick.png
+      - Assets/images/ticketbg.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

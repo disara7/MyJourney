@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:myjourney_flutter/pay.dart';
+import 'package:myjourney_flutter/payvehicle.dart';
 
-class description extends StatefulWidget {
-  const description({super.key});
+class vehicle extends StatefulWidget {
+  const vehicle({super.key});
 
   @override
-  _descriptionState createState() => _descriptionState();
+  _vehicleState createState() => _vehicleState();
 }
 
-class _descriptionState extends State<description> {
+class _vehicleState extends State<vehicle> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -41,9 +42,9 @@ class _descriptionState extends State<description> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image.asset(
-                'Assets/images/spacestaylarge.png',
+                'Assets/images/submarine.png',
                 height: 400,
-                width: 400,
+                width: 800,
                 //alignment: Alignment.topCenter,
               ),
               const Row(
@@ -52,7 +53,7 @@ class _descriptionState extends State<description> {
                     padding: EdgeInsets.only(left: 24),
                   ),
                   Text(
-                    "Space Stay",
+                    "G-Submarin3",
                     style: TextStyle(
                       color: Color.fromARGB(255, 196, 196, 196),
                       fontSize: 26.0,
@@ -62,7 +63,7 @@ class _descriptionState extends State<description> {
                   ),
                   Spacer(),
                   Text(
-                    "USD 164",
+                    "USD 365",
                     style: TextStyle(
                       color: Color.fromARGB(255, 196, 196, 196),
                       fontSize: 32.0,
@@ -76,14 +77,14 @@ class _descriptionState extends State<description> {
                   const Padding(
                     padding: EdgeInsets.only(left: 24),
                   ),
-                  for (var i = 0; i < 5; i++)
+                  for (var i = 0; i < 4; i++)
                     const Icon(
                       Icons.star,
                       color: Color.fromARGB(255, 235, 192, 18),
                     ),
                   const Spacer(),
                   const Text(
-                    "3 Nights",
+                    "One Way",
                     style: TextStyle(
                       color: Color.fromARGB(255, 196, 196, 196),
                       fontSize: 14.0,
@@ -100,7 +101,7 @@ class _descriptionState extends State<description> {
                     padding: EdgeInsets.only(left: 24),
                   ),
                   Text(
-                    "Location: Venus",
+                    "Maximum Passengers: 25",
                     style: TextStyle(
                       color: Color.fromARGB(255, 196, 196, 196),
                       fontSize: 15.0,
@@ -110,7 +111,7 @@ class _descriptionState extends State<description> {
                   ),
                   Spacer(),
                   Text(
-                    "Family (4 Members)",
+                    "From Mars to Venus",
                     style: TextStyle(
                       color: Color.fromARGB(255, 196, 196, 196),
                       fontSize: 14.0,
@@ -129,7 +130,7 @@ class _descriptionState extends State<description> {
                     text: const TextSpan(children: <InlineSpan>[
                       WidgetSpan(
                           child: Text(
-                        "From Mars: approximately 5 kilometers east \nof Pink Valley beach",
+                        "Lands from Mars: approximately 5 \nkilometers east of Pink Valley beach",
                         textAlign: TextAlign.justify,
                         style: TextStyle(
                           color: Color.fromARGB(255, 196, 196, 196),
@@ -141,15 +142,15 @@ class _descriptionState extends State<description> {
                   ),
                   const Spacer(),
                   ElevatedButton(
-                    onPressed: () => navigateTopay(context, const pay()),
+                    onPressed: () => navigateTopayvehicle(context, const pay()),
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(
                           const Color(0xff1d9e9e)),
                       fixedSize:
-                          MaterialStateProperty.all<Size>(const Size(70, 30)),
+                          MaterialStateProperty.all<Size>(const Size(120, 30)),
                     ),
                     child: const Text(
-                      'BOOK',
+                      'BUY TICKETS',
                       style: TextStyle(
                         fontSize: 12,
                       ),
@@ -200,9 +201,9 @@ class _descriptionState extends State<description> {
   }
 }
 
-void navigateTopay(BuildContext context, Widget payWidget) {
+void navigateTopayvehicle(BuildContext context, Widget payvehicleWidget) {
   Navigator.push(
     context,
-    MaterialPageRoute(builder: (context) => const pay()),
+    MaterialPageRoute(builder: (context) => const payvehicle()),
   );
 }

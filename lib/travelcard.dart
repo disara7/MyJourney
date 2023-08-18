@@ -1,8 +1,6 @@
-import 'dart:js';
 
 import 'description.dart';
 import 'package:flutter/material.dart';
-import 'booking.dart';
 
 Widget travelCard(String assetImagePath, String hotelName, String location,
     int rating, String price) {
@@ -119,6 +117,6 @@ Widget travelCard(String assetImagePath, String hotelName, String location,
 void navigateTodescription(BuildContext context, Widget descriptionWidget) {
   Navigator.push(
     context,
-    MaterialPageRoute(builder: (context) => description()),
+    MaterialPageRoute(builder: (context) => const description()),
   );
 }

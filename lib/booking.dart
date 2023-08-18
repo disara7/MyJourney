@@ -44,7 +44,7 @@ class _bookingState extends State<booking> {
                     color: Color(0xff1d9e9e),
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 IconButton(
                   onPressed: () {},
                   icon: const Icon(
@@ -64,9 +64,9 @@ class _bookingState extends State<booking> {
               children: [
                 Material(
                   elevation: 10.0,
-                  color: Color.fromARGB(255, 88, 88, 88),
+                  color: const Color.fromARGB(255, 88, 88, 88),
                   borderRadius: BorderRadius.circular(30.0),
-                  shadowColor: Color.fromARGB(84, 161, 161, 161),
+                  shadowColor: const Color.fromARGB(84, 161, 161, 161),
                   child: const TextField(
                     textAlign: TextAlign.start,
                     textAlignVertical: TextAlignVertical.center,
@@ -81,9 +81,9 @@ class _bookingState extends State<booking> {
                   ),
                 ),
                 const SizedBox(height: 10.0),
-                Row(
+                const Row(
                   children: [
-                    const Text(
+                    Text(
                       "CHOOSE YOUR STAY",
                       style: TextStyle(
                         color: Color(0xff1d9e9e),
